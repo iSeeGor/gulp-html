@@ -1,0 +1,113 @@
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover, 
+.input:-webkit-autofill:focus,
+.textarea:-webkit-autofill,
+.textarea:-webkit-autofill:hover,
+.textarea:-webkit-autofill:focus {
+    // border-color: inherit;
+    // border: none;
+    -webkit-text-fill-color: inherit;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    background: #fff;
+    transition: none;
+}
+
+.input[type="text"],
+.input[type="email"],
+.input[type="url"],
+.input[type="password"],
+.input[type="search"],
+.input[type="number"],
+.input[type="tel"],
+.input[type="range"],
+.input[type="date"],
+.input[type="month"],
+.input[type="week"],
+.input[type="time"],
+.input[type="datetime"],
+.input[type="datetime-local"],
+.input[type="color"],
+.textarea {
+    padding: 2px 12px;
+    border-radius: 0;
+}
+
+.input[type="text"]:focus,
+.input[type="email"]:focus,
+.input[type="url"]:focus,
+.input[type="password"]:focus,
+.input[type="search"]:focus,
+.input[type="number"]:focus,
+.input[type="tel"]:focus,
+.input[type="range"]:focus,
+.input[type="date"]:focus,
+.input[type="month"]:focus,
+.input[type="week"]:focus,
+.input[type="time"]:focus,
+.input[type="datetime"]:focus,
+.input[type="datetime-local"]:focus,
+.input[type="color"]:focus,
+.textarea:focus {   
+    // border-bottom: 2px solid $blue;
+}
+
+.input[type="search"]::-webkit-search-decoration,
+.input[type="search"]::-webkit-search-cancel-button,
+.input[type="search"]::-webkit-search-results-button,
+.input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+.input,
+.textarea {
+    padding: 4px 16px;
+    border: 0;
+    border-bottom: 2px solid #aec5e0;
+
+    &::placeholder {
+        font-family: inherit;
+        letter-spacing: 0;
+        color: blue;
+        transition: transform 0.3s ease,
+                    color .3s ease;
+        transform: translateY(0px);
+        z-index:1;
+    }
+    
+    &:focus {
+
+        &::placeholder {
+            color: transparent;  
+        }
+    }
+}
+
+.input {
+
+    &_number {
+        &::placeholder {
+            color: transparent;
+        }
+
+        &:focus::placeholder {
+            color: #717171;
+        }
+    }
+}
+
+.input:focus::-webkit-input-placeholder { color:transparent; }
+.input:focus:-moz-placeholder { color:transparent; } 
+.input:focus::-moz-placeholder { color:transparent; } 
+.input:focus:-ms-input-placeholder { color:transparent; }
+
+/* Remove Number From Inputs */
+.input[type=number]::-webkit-inner-spin-button, 
+.input[type=number]::-webkit-outer-spin-button,
+.input[type=number] { 
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    margin: 0; 
+} 
+

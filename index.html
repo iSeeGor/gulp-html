@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="author name" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Project</title>
+
+    <meta name="description" content="Project description..." />
+    <meta name="keywords" content="Project keywords..." />
+    <meta name="format-detection" content="telephone=no">
+
+    <!--== favicon's  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="transparent">
+
+    <!--== Preload Fonts -->
+	<link rel="preload" href="/assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+
+	<!--== CSS Vendor -->
+	<link rel="stylesheet" href="/assets/vendor/css/vendor.css" />
+
+	<!--== CSS Main Style -->
+	<!-- <link rel="stylesheet" href="/assets/css/style.css" /> -->
+	<link rel="stylesheet" href="/assets/css/style-mq.css" />
+
+	<!--== CSS Media -->
+	<link rel="stylesheet" href="/assets/css/media.css" />
+
+</head>
+
+<body class="body">
+	<div class="root">
+	
+		<header class="header">
+			<h4>header</h4>
+		</header>
+
+		<div class="hero">
+			<button class="button header-details__button" data-fancybox="" data-modal="true" data-src="#m-callback">Замовити дзвінок</button>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+
+				<h2>footer 2</h2>
+				
+			</div>
+		</footer>
+
+		<div class="modals">
+
+			<div class="modals__modal modal m-callback" id="m-callback">
+				<div class="modal__inner">
+					<div class="modal__header">
+						<div class="modal__title">Замовити зворотній дзвінок</div>
+						<div class="modal__text">
+							Заповніть будь ласка усі поля форми.<br>
+							Ми зв'яжемося із вами на протязі 10 хв, та надамо
+							усю необхідну інформацію.
+						</div>
+					</div>
+					<div class="modal__content">
+		
+						<form class="modal__form form js-validate" autocomplete="off">
+							<div class="form__row">
+								<div class="form__group">
+									<input class="input-dd" type="text" name="name" id="m-name" required>
+									<label for="m-name"><span>Ваше Ім'я</span></label>
+								</div>
+							</div>
+		
+							<div class="form__row">
+								<div class="form__group">
+									<input class="input-dd input_number" type="text" name="phone" id="m-phone" required minlength="10">
+									<label for="m-phone"><span>Ваш телефон</span></label>
+								</div>
+							</div>
+		
+							<button class="button button-svg">
+								<span class="button-svg__deco-one"></span>
+								<span class="button-svg__deco-two"></span>
+								<svg height="52" width="350" xmlns="http://www.w3.org/2000/svg">
+									<rect class="button-svg__rect1" height="52" width="350" />
+									<rect class="button-svg__rect2" height="52" width="350" />
+								</svg>
+								<span class="button-svg__text">Відправити</span>
+							</button>
+						</form>
+					</div>
+					<button class="modal__button-close button button-close js-reset-validation" data-fancybox-close>
+						<span class="button-close__item"></span>
+						<span class="button-close__item"></span>
+						<span class="button-close__item"></span>
+					</button>
+				</div>
+			</div>
+		
+			<div class="modals__modal modal m-success" id="m-success">
+				<div class="modal__inner">
+					<div class="modal__header">
+						<div class="modal__title">Спасибо, заявка успешно отправлена</div>
+						<div class="modal__text">
+							Мы свяжемся с Вами в ближайшее время
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+
+		<div class="to-top">
+			<a class="button button-more">
+				<div class="button-more__circle">
+					<svg xmlns="http://www.w3.org/2000/svg">
+						<circle cx="50%" cy="50%" r="22.5"></circle>
+					</svg>
+				</div>
+			</a>
+			<div class="to-top__name">На гору</div>
+		</div>
+	</div><!-- end.root -->
+
+	<!--== Google Map  -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnmv8rDSzIL4RVE5EBt6Kt4hqdFXU2mA4"></script>
+
+	<!--== Scripts -->
+	<script src="/assets/vendor/js/vendor.js"></script>
+	<script src="/assets/js/scripts.js"></script>
+
+	</body>
+	</html>
+		
+		
+

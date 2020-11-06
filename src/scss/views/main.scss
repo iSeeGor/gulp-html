@@ -1,0 +1,11 @@
+@import 'layouts/root'; 			// Root
+@import 'layouts/header'; 			// Header
+@import 'layouts/footer'; 			// Footer
+
+
+// pages
+@import 'pages/404';				// 404
+
+
+@import 'templates/modals'; 		// Modals
+@import 'templates/preloader'; 		// Preloader

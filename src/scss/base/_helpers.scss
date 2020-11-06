@@ -1,0 +1,126 @@
+/*============================================================================
+	#Helper Classes
+==============================================================================*/
+.container__no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.link {
+    color: red;
+    text-decoration: none;
+
+    &:active,
+    &:visited {
+        color: red;
+    }
+}
+
+.breadcrumbs {
+    &__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__item {
+        color: white;
+
+        &:not(:last-child)::after {
+            content: "/";
+            margin: 0 4px;
+        }
+    }
+
+    &__link {
+        color: white;
+        font-size: 1.4rem;
+
+        &:active,
+        &:visited {
+            color: white;
+        }
+
+        &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+        }
+    }
+}
+
+.to-top {
+    position: fixed;
+    transform: rotate(-90deg) translateX(-100px);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    bottom: 40px;
+    right: 00px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    .button-more {
+        display: block;
+    }
+
+    &__name {
+        padding-right: 20px;
+    }
+
+    .button-more__circle {
+        top: -14px;
+    }
+
+    &:hover {
+        .button-more svg circle {
+            stroke-dashoffset: 200;
+        }
+
+        .button-more__circle::before {
+            left: 0;
+        }
+    }
+    &._visible {
+        opacity: 1;
+        visibility: visible;
+        transform: rotate(-90deg) translateX(0px);
+    }
+}
+
+/* iframe video block
+ ------------------------------------------------------------*/
+.b-iframe {
+    &__container {
+        overflow: hidden;
+        // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
+        padding-top: 56.25%;
+        position: relative;
+    }
+
+    iframe {
+        border: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
